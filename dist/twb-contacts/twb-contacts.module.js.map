@@ -1,0 +1,1 @@
+{"version":3,"file":"twb-contacts.module.js","sourceRoot":"","sources":["../../src/twb-contacts/twb-contacts.module.ts"],"names":[],"mappings":";;;;;;;;;AAAA,2CAAwC;AACxC,iEAA4D;AAC5D,mEAA8D;AAMvD,IAAM,iBAAiB,GAAvB,MAAM,iBAAiB;CAAE,CAAA;AAAnB,8CAAiB;4BAAjB,iBAAiB;IAJ7B,IAAA,eAAM,EAAC;QACJ,SAAS,EAAC,CAAC,yCAAkB,EAAC,2CAAmB,CAAC;QAClD,OAAO,EAAC,EAAE;KACb,CAAC;GACW,iBAAiB,CAAE"}
