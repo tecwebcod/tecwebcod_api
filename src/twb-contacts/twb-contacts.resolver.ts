@@ -1,15 +1,15 @@
 import { prisma } from "src/common/prismaClient";
 import { TwbContactsService } from "./twb-contacts.service";
 import { Args, Query, Resolver } from "@nestjs/graphql";
-import { Prisma } from "@prisma/client";
+import { Prisma, PrismaClient } from "@prisma/client";
+const service = new TwbContactsService()
 
-@Resolver(()=> prisma.contacts)
+@Resolver(()=> Prisma.ContactsScalarFieldEnum)
 export class TwbContactsResolver{
-    constructor(private readonly service:TwbContactsService){}
-   
-    @Query(()=> prisma.contacts,{name:'twbContacts',nullable:true})
+
+    @Query(()=> [],{name:'twbContacts',nullable:true})
     twbContacts(@Args() args: Prisma.ContactsFindManyArgs){
-      return this.service.twbContact(args)
+      return service.twbContact(args)
     }
 
 }

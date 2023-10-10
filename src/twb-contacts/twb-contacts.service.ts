@@ -1,11 +1,11 @@
-import {Injectable} from "@nestjs/common";
-import { Prisma, PrismaClient } from "@prisma/client";
+import { Injectable } from "@nestjs/common";
+import { Args } from "@nestjs/graphql";
+import { Prisma } from "@prisma/client";
+import { prisma } from "src/common/prismaClient";
 
 @Injectable()
 export class TwbContactsService{
-    constructor(private readonly prisma:PrismaClient ){}
-
-    twbContact(args:Prisma.ContactsFindManyArgs){
-      return this.prisma.contacts.findMany(args)                                                                                                                                                                                                                                                     
+    twbContact(@Args() args:Prisma.ContactsFindManyArgs){
+      return prisma.contacts.findMany(args)                                                                                                                                                                                                                                                     
     }                                                                                                                                           
 }

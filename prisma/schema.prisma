@@ -11,7 +11,7 @@ datasource db {
 }
 
 model Contacts {
-  id          String   @id @default(uuid())
+  id          String   @id @default(uuid()) @unique
   name        String
   email       String
   phone       String
